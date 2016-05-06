@@ -1,0 +1,44 @@
+.tableHead{
+  font-size: 35px;
+  color: #0000ff;
+/*  -webkit-text-stroke: 1px #ffffff; */
+
+}
+
+.tableBody{
+  color:black;
+/*  -webkit-text-stroke: 1px white; */
+}
+
+.tableRow{
+  padding: 10px;
+}
+
+.movieName{
+  padding-right: 10px;
+  color:white;
+  font-size:25px;
+}
+
+.genre{
+  color:white;
+  font-size: 25px;
+}
+
+.thumbs{
+  margin:2px;
+  height: 30px;
+  width: 30px;
+}
+
+body{
+  background-image: url("#");
+  color: black;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.movieTable{
+  align-items: center;
+}

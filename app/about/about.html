@@ -1,1 +1,28 @@
-{{message}}
+<!-- HERE IS THE TABL FOR MY MOVIES-->
+<div>
+  <input type="text" ng-model="search" align="center"/> <!-- HERE IS THE SEARCH BAR FOR MY MOVIE LIST -->
+  <form action="demo_form.asp">
+    <input type="checkbox" name="HTML5" value="Html5" ng-click="clickFilter('HTML5')">HTML 5<br> <!--ng-click="toggle()" Possible Code for keeping only HTML To load will be reused if working.-->
+    <input type="checkbox" name="CSS Styles" value="CSS" ng-click="clickFilter('CSS')">CSS Styles<br>
+    <input type="checkbox" name="JavaScript" value="JavaScript" ng-click="clickFilter('JavaScript')">JavaScript<br>
+    <input type="checkbox" name="Angular" value="Angular" ng-click="clickFilter('ANG')">Angular<br>
+  </form>
+</div>
+<table align="center" >
+  <thead class="tableHead">
+    <tr class="tableRow">
+      <th><span>Syntax Name</span></th>
+      <th><span>Language</span></th>
+      <th><span>Defintion</span></th>
+    </tr>
+  </thead>
+  <tbody class="table1">
+
+
+    <tr ng-repeat="boom in codeList  | orderBy:sortType:sortReverse | filter:search | filter:myFilter"> <!-- HERE IS THE REPEAT, COMING FROM ABOUT.CONTROLLER.JS $SCOPE.MOVIES -->
+      <td class="#">{{boom.syntax}}</td>
+      <td class="#">{{boom.language}}</td>
+      <td class="#">{{boom.def}}</td>
+    </tr>
+    </tbody>
+</table>
